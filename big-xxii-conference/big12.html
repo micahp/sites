@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Big XII Conference 2017 UT Austin</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<style>
+	@font-face {
+		font-family: BebasNeueRegular;
+		src: url(bebas/TTFs/BebasNeueRegular.ttf);
+	}
+	@font-face {
+		font-family: BebasNeueBold;
+		src: url(bebas/TTFs/BebasNeueBold.ttf);
+		font-weight: bold;
+	}
+	@font-face {
+		font-family: BebasNeueThin;
+		src: url(bebas/TTFs/BebasNeueThin.ttf);
+	}
+	@font-face {
+		font-family: BebasNeueBook;
+		src: url(bebas/TTFs/BebasNeueBook.ttf);
+	}
+	body {
+		font-family: BebasNeueRegular;
+		padding: 0;
+		margin: 0;
+		background: #000;
+		color: #ffffff;
+	}
+	p {
+		margin: 0;
+	}
+	.fixed-width {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.container {
+		padding: 0;
+	}
+	#header {
+		background: #000000;
+		height: 50px;
+		font-size: 200%;
+	}
+	#nav {
+		padding: 7px 0 0 15px;
+		margin: 0;
+		list-style: none;
+	}
+	#nav > li {
+		display: block;
+		float: left;
+		padding-right: 15px;
+	}
+	.logo {
+		width: 100%;
+	}
+	.section-image {
+		width: 100%;
+		height: 387px;
+		position: relative;
+		margin: auto;
+	}
+	.no-padding {
+		padding: 0;
+	}
+	.text-lead-left {
+		font-family: BebasNeueBold;
+		color: #000000;
+		position: absolute;
+		font-size: 114px;
+		line-height: 85%;
+		top: 20px;
+		left: 15px;
+	}
+	.text-support-left {
+		font-family: BebasNeueRegular;
+		position: absolute;
+		line-height: 90%;
+		padding-top: 85px;
+		font-size: 30px;
+		top: 120px;
+		left: 15px;
+	}
+	.text-lead-right {
+		font-family: BebasNeueBold;
+		color: #000000;
+		position: absolute;
+		font-size: 114px;
+		line-height: 85%;
+		top: 20px;
+		left: 62%;
+	}
+	.text-support-right {
+		font-family: BebasNeueRegular;
+		position: absolute;
+		line-height: 90%;
+		padding-top: 85px;
+		font-size: 30px;
+		top: 120px;
+		left: 77%;
+	}
+	.caption-left {
+		
+	}
+	.caption-right {
+		text-align: right;
+	}
+	.noselect {
+	  -webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+	  -khtml-user-select: none;    /* Konqueror */
+	  -moz-user-select: none;      /* Firefox */
+	  -ms-user-select: none;       /* IE/Edge */
+	  user-select: none;           /* non-prefixed version, currently
+	    	                              not supported by any browser */
+	}
+	img.desaturate { /* grayscale */
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+	}
+	.cover {
+		object-fit: cover;
+	}
+	#tower-image {
+		object-position: 0 40%;
+	}
+	#computer-girl {
+		object-position: 0 13%;
+	}
+	/* Ratio for photos is 2544x852 => 1200x387 */
+</style>
+</head>
+<body>
+	<div id="wrapper" class="fixed-width">
+		<div id="header">
+			<ul id="nav">
+				<li>Home</li>
+				<li>Conference</li>
+				<li>Matter</li>
+			</ul>
+		</div>
+		<div class="logo"><img src="big12-2017 logo cropped.jpg" width="1200" height="640"></div>
+		<div class="section-image">
+			<img id="tower-image" class="cover desaturate" src="ut-hero-tower.jpg" width="1200" height="387">
+			<div class="text-lead-left"><p>About<br/>Austin</p></div>
+			<div class="text-support-left"><p>The conference will<br/>be held in the state<br/>capitol of Texas</p></div>
+		</div>
+		<div class="section-image">
+			<img class="desaturate" src="speaker.png" width="1200" height="387">
+			<div class="text-lead-right"><p>Conference<br/>Workshops</p></div>
+			<div class="text-support-right"><p>Interested in conducting a<br/>conference workshop</p></div>
+		</div>
+		<div class="section-image">
+			<div class="caption-left">
+				<div class="section-image">
+					<img id="computer-girl" class="cover desaturate" src="computer-girl.jpg" width="1200" height="387">	
+					<div class="text-lead-left"><p>Register<br/>Later</p></div>
+					<div class="text-support-left"><p>Registration will be<br/>available within the<br/>next several weeks</p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+	// function isVisibleInViewport(elem)
+	// {
+	//     var y = elem.offsetTop;
+	//     var height = elem.offsetHeight;
+
+	//     while ( elem = elem.offsetParent )
+	//         y += elem.offsetTop;
+
+	//     var maxHeight = y + height;
+	//     var isVisible = ( y < ( window.pageYOffset + window.innerHeight ) ) && ( maxHeight >= window.pageYOffset );
+	//     return isVisible; 
+
+	// }
+
+	// function check()
+	// {
+	//     var canvas = $("#computer-girl");
+	//     if(!isVisibleInViewport(canvas))
+	//         //canvas.addClass("desaturate");
+	//     	console.log("desaturate");
+	//     else
+	//     	//canvas.removeClass("desaturate");
+	//     	console.log("saturate");
+	// }
+
+	//$(window).on("scroll", check);
+
+	$(".section-image, .logo").hover(function() {
+		$(this).find("img").removeClass("desaturate", 1000);
+	}, function() {
+		$(this).find("img").addClass("desaturate", 1000);
+	});
+
+	</script>
+</body>
+</html>
