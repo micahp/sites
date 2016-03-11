@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="jquery.inview.js"></script>
 <style>
 	@font-face {
 		font-family: BebasNeueRegular;
@@ -120,8 +121,21 @@
 	}
 	img.desaturate { /* grayscale */
 		-webkit-filter: grayscale(100%);
+		-webkit-transition: 1.5s ease-in-out;
+		-moz-filter: grayscale(100%); 
+		-moz-transition: 1.5s ease-in-out;
+		-o-filter: grayscale(100%); 
+		-o-transition: 1.5s ease-in-out;
 		filter: grayscale(100%);
 	}
+	img {
+		-webkit-filter: grayscale(0%);
+		-webkit-transition: 1.5s ease-in-out;
+		-moz-filter: grayscale(0%);
+		-moz-transition: 1.5s ease-in-out;
+		-o-filter: grayscale(0%);
+		-o-transition: 1.5s ease-in-out;
+		filter: grayscale(0%);	}
 	.cover {
 		object-fit: cover;
 	}
@@ -143,7 +157,7 @@
 				<li>Matter</li>
 			</ul>
 		</div>
-		<div class="logo"><img src="big12-2017 logo cropped.jpg" width="1200" height="640"></div>
+		<div class="logo"><img class="desaturate" src="big12-2017 logo cropped.jpg" width="1200" height="640"></div>
 		<div class="section-image">
 			<img id="tower-image" class="cover desaturate" src="ut-hero-tower.jpg" width="1200" height="387">
 			<div class="text-lead-left"><p>About<br/>Austin</p></div>
@@ -167,38 +181,22 @@
 
 	<script>
 
-	// function isVisibleInViewport(elem)
-	// {
-	//     var y = elem.offsetTop;
-	//     var height = elem.offsetHeight;
+		$(".section-image, .logo").bind("inview", function(event, visible){
+			if (visible) {
+				$(this).find("img").removeClass("desaturate");
+			} else {
+				$(this).find("img").addClass("desaturate");
+			}
+		});
 
-	//     while ( elem = elem.offsetParent )
-	//         y += elem.offsetTop;
+		// Code to grayscale an image if it is not hovered over
+	// $(".section-image, .logo").hover(function() {
+	// 	$(this).find("img").removeClass("desaturate", 1000);
+	// }, function() {
+	// 	$(this).find("img").addClass("desaturate", 1000);
+	// });
 
-	//     var maxHeight = y + height;
-	//     var isVisible = ( y < ( window.pageYOffset + window.innerHeight ) ) && ( maxHeight >= window.pageYOffset );
-	//     return isVisible; 
-
-	// }
-
-	// function check()
-	// {
-	//     var canvas = $("#computer-girl");
-	//     if(!isVisibleInViewport(canvas))
-	//         //canvas.addClass("desaturate");
-	//     	console.log("desaturate");
-	//     else
-	//     	//canvas.removeClass("desaturate");
-	//     	console.log("saturate");
-	// }
-
-	//$(window).on("scroll", check);
-
-	$(".section-image, .logo").hover(function() {
-		$(this).find("img").removeClass("desaturate", 1000);
-	}, function() {
-		$(this).find("img").addClass("desaturate", 1000);
-	});
+	
 
 	</script>
 </body>
