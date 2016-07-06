@@ -1,0 +1,139 @@
+@font-face {
+		font-family: BebasNeueRegular;
+		src: url(bebas/TTFs/BebasNeueRegular.ttf);
+	}
+	@font-face {
+		font-family: BebasNeueBold;
+		src: url(bebas/TTFs/BebasNeueBold.ttf);
+		font-weight: bold;
+	}
+	@font-face {
+		font-family: BebasNeueThin;
+		src: url(bebas/TTFs/BebasNeueThin.ttf);
+	}
+	@font-face {
+		font-family: BebasNeueBook;
+		src: url(bebas/TTFs/BebasNeueBook.ttf);
+	}
+	body {
+		font-family: BebasNeueRegular;
+		padding: 0;
+		margin: 0;
+		background: #000;
+		color: #ffffff;
+	}
+	p {
+		margin: 0;
+	}
+	.fixed-width {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.container {
+		padding: 0;
+	}
+	#header {
+		background: #000000;
+		height: 50px;
+		font-size: 200%;
+	}
+	#nav {
+		padding: 7px 0 0 15px;
+		margin: 0;
+		list-style: none;
+	}
+	#nav > li {
+		display: block;
+		float: left;
+		padding-right: 15px;
+	}
+	.logo {
+		width: 100%;
+	}
+	.section-image {
+		width: 100%;
+		height: 387px;
+		position: relative;
+		margin: auto;
+	}
+	.no-padding {
+		padding: 0;
+	}
+	.text-lead-left {
+		font-family: BebasNeueBold;
+		color: #000000;
+		position: absolute;
+		font-size: 114px;
+		line-height: 85%;
+		top: 20px;
+		left: 15px;
+	}
+	.text-support-left {
+		font-family: BebasNeueRegular;
+		position: absolute;
+		line-height: 90%;
+		padding-top: 85px;
+		font-size: 30px;
+		top: 120px;
+		left: 15px;
+	}
+	.text-lead-right {
+		font-family: BebasNeueBold;
+		color: #000000;
+		position: absolute;
+		font-size: 114px;
+		line-height: 85%;
+		top: 20px;
+		left: 62%;
+	}
+	.text-support-right {
+		font-family: BebasNeueRegular;
+		position: absolute;
+		line-height: 90%;
+		padding-top: 85px;
+		font-size: 30px;
+		top: 120px;
+		left: 77%;
+	}
+	.caption-left {
+		
+	}
+	.caption-right {
+		text-align: right;
+	}
+	.noselect {
+	  -webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+	  -khtml-user-select: none;    /* Konqueror */
+	  -moz-user-select: none;      /* Firefox */
+	  -ms-user-select: none;       /* IE/Edge */
+	  user-select: none;           /* non-prefixed version, currently
+	    	                              not supported by any browser */
+	}
+	img.desaturate { /* grayscale */
+		-webkit-filter: grayscale(100%);
+		-webkit-transition: 1.5s ease-in-out;
+		-moz-filter: grayscale(100%); 
+		-moz-transition: 1.5s ease-in-out;
+		-o-filter: grayscale(100%); 
+		-o-transition: 1.5s ease-in-out;
+		filter: grayscale(100%);
+	}
+	img {
+		-webkit-filter: grayscale(0%);
+		-webkit-transition: 1.5s ease-in-out;
+		-moz-filter: grayscale(0%);
+		-moz-transition: 1.5s ease-in-out;
+		-o-filter: grayscale(0%);
+		-o-transition: 1.5s ease-in-out;
+		filter: grayscale(0%);	}
+	.cover {
+		object-fit: cover;
+	}
+	#tower-image {
+		object-position: 0 40%;
+	}
+	#computer-girl {
+		object-position: 0 13%;
+	}
+	/* Ratio for photos is 2544x852 => 1200x387 */
