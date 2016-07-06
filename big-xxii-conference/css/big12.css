@@ -1,19 +1,19 @@
 @font-face {
 		font-family: BebasNeueRegular;
-		src: url(bebas/TTFs/BebasNeueRegular.ttf);
+		src: url(../bebas/TTFs/BebasNeueRegular.ttf);
 	}
 	@font-face {
 		font-family: BebasNeueBold;
-		src: url(bebas/TTFs/BebasNeueBold.ttf);
+		src: url(../bebas/TTFs/BebasNeueBold.ttf);
 		font-weight: bold;
 	}
 	@font-face {
 		font-family: BebasNeueThin;
-		src: url(bebas/TTFs/BebasNeueThin.ttf);
+		src: url(../bebas/TTFs/BebasNeueThin.ttf);
 	}
 	@font-face {
 		font-family: BebasNeueBook;
-		src: url(bebas/TTFs/BebasNeueBook.ttf);
+		src: url(../bebas/TTFs/BebasNeueBook.ttf);
 	}
 	body {
 		font-family: BebasNeueRegular;
