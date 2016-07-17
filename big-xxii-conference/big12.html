@@ -9,36 +9,117 @@
 	<script src="jquery.inview.js"></script>
 </head>
 <body>
-	<div id="wrapper" class="fixed-width">
-		<div id="header">
-			<ul id="nav">
+	<div class="wrapper fixed-width">
+		<div class="header">
+			<ul class="nav">
 				<li>Home</li>
-				<li>Conference</li>
-				<li>Matter</li>
+				<li>Information</li>
+				<li>Registration</li>
+				<li>Keynotes</li>
+				<li>Entertainment</li>
+				<li>About Austin</li>
+				<li>Workshops</li>
+				<li>Career Fair</li>
+				<li>About Us</li>
 			</ul>
 		</div>
-		<div class="logo"><img class="desaturate" src="big12-2017 logo cropped.jpg" width="1200" height="640"></div>
+		<div class="logo"><img class="desaturate" src="images/big12-2017 logo cropped.jpg" width="1200" height="640"></div>
 		<div class="section-image">
-			<img id="tower-image" class="cover desaturate" src="ut-hero-tower.jpg" width="1200" height="387">
-			<div class="text-lead-left"><p>About<br/>Austin</p></div>
-			<div class="text-support-left"><p>The conference will<br/>be held in the state<br/>capitol of Texas</p></div>
-		</div>
-		<div class="section-image">
-			<img class="desaturate" src="speaker.png" width="1200" height="387">
-			<div class="text-lead-right"><p>Conference<br/>Workshops</p></div>
-			<div class="text-support-right"><p>Interested in conducting a<br/>conference workshop</p></div>
-		</div>
-		<div class="section-image">
-			<div class="caption-left">
-				<div class="section-image">
-					<img id="computer-girl" class="cover desaturate" src="computer-girl.jpg" width="1200" height="387">	
-					<div class="text-lead-left"><p>Register<br/>Later</p></div>
-					<div class="text-support-left"><p>Registration will be<br/>available within the<br/>next several weeks</p></div>
+			<img class="cover desaturate" src="images/MORE INFO.jpg">
+			<a href="./info">
+				<div class="caption caption-left">
+					<div class="text-lead"><p>Get More Information</p></div>
+					<div class="text-support"><p>Find out more details about the 40th Big XII Conference</p></div>
 				</div>
-			</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/REGISTER LATER.jpg">	
+			<a href="./registration">
+				<div class="caption caption-right">
+					<div class="text-lead"><p>Registration Later</p></div>
+					<div class="text-support"><p>Registration will be available at a later date</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/KEYNOTE.jpg">
+			<a href="./keynotes">
+				<div class="caption caption-left">
+					<div class="text-lead"><p>Keynotes</p></div>
+					<div class="text-support"><p>Keynote Speakers and everything you need to know about them</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/ENTERTAINMENT.jpg">
+			<a href="./entertainment">
+				<div class="caption caption-right">
+					<div class="text-lead"><p>Entertainment</p></div>
+					<div class="text-support"><p>Are you ready to be entertained?</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/ABOUT AUSTIN.jpg">
+			<a href="./austin">
+				<div class="caption caption-left">
+					<div class="text-lead"><p>About Austin</p></div>
+					<div class="text-support"><p>The conference will be held deep in the heart of Texas</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/WORKSHOPS.jpg">
+			<a href="./workshops">
+				<div class="caption caption-right">
+					<div class="text-lead"><p>Workshops</p></div>
+					<div class="text-support"><p>Interested in molding the minds of the movement</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/CAREER FAIR.jpg">
+			<a href="fair">
+				<div class="caption caption-left">
+					<div class="text-lead"><p>Career Fair</p></div>
+					<div class="text-support"><p>Create a new level of achievement for the future</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/SPONSORSHIP.jpg">
+			<a href="sponsorships">
+				<div class="caption caption-right">
+					<div class="text-lead"><p>Sponsorships</p></div>
+					<div class="text-support"><p>Broaden your spectrum and bridge the gap</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="section-image">
+			<img class="cover desaturate" src="images/CONTACT US.jpg">
+			<a href="contact">
+				<div class="caption caption-left">
+					<div class="text-lead"><p>Contact Us</p></div>
+					<div class="text-support"><p>Stay Connected through email and social media</p></div>
+				</div>
+			</a>
+		</div>
+		<div class="footer">
+			<ul class="nav">
+				<li>Home</li>
+				<li>Information</li>
+				<li>Registration</li>
+				<li>Keynotes</li>
+				<li>Entertainment</li>
+				<li>About Austin</li>
+				<li>Workshops</li>
+				<li>Career Fair</li>
+				<li>About Us</li>
+			</ul>
+			<p>&#169; Big xii committee 2016</p>
 		</div>
 	</div>
-
 	<script>
 
 		$(".section-image, .logo").bind("inview", function(event, visible){
@@ -49,14 +130,12 @@
 			}
 		});
 
-		// Code to grayscale an image if it is not hovered over
+	// Code to grayscale an image if it is not hovered over
 	// $(".section-image, .logo").hover(function() {
 	// 	$(this).find("img").removeClass("desaturate", 1000);
 	// }, function() {
 	// 	$(this).find("img").addClass("desaturate", 1000);
 	// });
-
-	
 
 	</script>
 </body>
