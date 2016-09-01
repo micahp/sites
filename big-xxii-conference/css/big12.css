@@ -1,172 +1,341 @@
 @font-face {
-		font-family: BebasNeueRegular;
-		src: url(../bebas/TTFs/BebasNeueRegular.ttf);
-	}
-	@font-face {
-		font-family: BebasNeueBold;
-		font-weight: bold;
-		src: url(../bebas/TTFs/BebasNeueBold.ttf);
-	}
-	@font-face {
-		font-family: BebasNeueThin;
-		src: url(../bebas/TTFs/BebasNeueThin.ttf);
-	}
-	@font-face {
-		font-family: BebasNeueBook;
-		src: url(../bebas/TTFs/BebasNeueBook.ttf);
-	}
-	body {
-		background: #000;
-		color: #ffffff;
-		font-family: BebasNeueRegular;
-		margin: 0;
-		padding: 0;
-	}
-	p {
-		margin: 0;
-	}
-	.fixed-width {
-		margin: 0 auto;
-		width: 1200px;
-	}
-	.container {
-		padding: 0;
-	}
-	.header {
-		background: #000000;
-		font-size: 200%;
-		height: 50px;
-	}
-	.footer {
-		height: 25px;
-		width: 750px;
-		margin: 0 auto;
-	}
-	.footer p {
-		display: block;
-		float: left;
-		padding-left: 15px;
-		margin: 0 auto;
-	}
-	.footer-nav > li {
-		display: block;
-		float: left;
-		list-style: none;
-		padding-right: 15px;
-	}
-	.nav {
-		list-style: none;
-		margin: 0;
-		padding: 7px 0 0 15px;
-	}
-	.nav > li {
-		display: block;
-		float: left;
-		padding-right: 15px;
-	}
-	.nav > li:hover {
-		cursor: pointer;
-		color: #cc5500;
-	}
-	.logo {
-		width: 100%;
-	}
-	.section-image {
-		height: 378px;
-		margin-top: 10px;
-		position: relative;
-		width: 100%;
-	}
-	.section-image img {
-		position: absolute;
-	}
-	.speaker {
-		background-image: url(../images/speaker.png);
-		height: 100%;
-		width: 100%;
-	}
-	.no-padding {
-		padding: 0;
-	}
-	.caption {		
-		background-color: rgba(0,0,0,1);
-		color: #fff;
-		padding: 12px 10px;
-		position: relative;
-		text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-		top: 50%;
-	}
-	.caption-left {
-		transition: padding-left .25s ease;
-		float: left;
-		backface-visibility: hidden;
-	}
-	.caption-right {
-		transition: padding-right .25s ease;
-		float: right;
-	}
-	.caption:active {
-		text-shadow: 2px 4px 3px #cc5500;
-	}
-	.caption-left:hover {
-		padding-left: 3%;
-	}
-	.caption-right:hover {
-		padding-right: 3%;
-	}
-	.text-lead {
-		font-family: BebasNeueBold;
-		font-size: 114px;
-		line-height: 85%;
-		margin-top: 5px;
-		position: relative;
-	}
-	.text-support {
-		font-family: BebasNeueRegular;
-		font-size: 30px;
-		line-height: 90%;
-		margin-bottom: -6px;
-		position: relative;
-	}
-	.text-align-left {
-		text-align: left;
-	}
-	.text-align-right {
-		text-align: right;
-	}
-	.noselect {
-	  -webkit-touch-callout: none; /* iOS Safari */
-	  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-	  -khtml-user-select: none;    /* Konqueror */
-	  -moz-user-select: none;      /* Firefox */
-	  -ms-user-select: none;       /* IE/Edge */
-	  user-select: none;           /* non-prefixed version, currently
-	    	                              not supported by any browser */
-	}
-	img.desaturate { /* grayscale */
-		-webkit-filter: grayscale(100%);
-		-webkit-transition: 1.5s ease-in-out;
-		-moz-filter: grayscale(100%); 
-		-moz-transition: 1.5s ease-in-out;
-		-o-filter: grayscale(100%); 
-		-o-transition: 1.5s ease-in-out;
-		filter: grayscale(100%);
-	}
-	img {
-		-webkit-filter: grayscale(0%);
-		-webkit-transition: 1.5s ease-in-out;
-		-moz-filter: grayscale(0%);
-		-moz-transition: 1.5s ease-in-out;
-		-o-filter: grayscale(0%);
-		-o-transition: 1.5s ease-in-out;
-		filter: grayscale(0%);	}
-	.cover {
-		object-fit: cover;
-	}
-	.tower-image {
-		object-position: 0 40%;
-	}
-	.computer-girl {
-		object-position: 0 13%;
-	}
-	/* Ratio for photos is 2544x852 => 1200x387 */
+	font-family: BebasNeueRegular;
+	src: url(../bebas/TTFs/BebasNeueRegular.ttf);
+}
+@font-face {
+	font-family: BebasNeueBold;
+	font-weight: bold;
+	src: url(../bebas/TTFs/BebasNeueBold.ttf);
+}
+@font-face {
+	font-family: BebasNeueThin;
+	src: url(../bebas/TTFs/BebasNeueThin.ttf);
+}
+@font-face {
+	font-family: BebasNeueBook;
+	src: url(../bebas/TTFs/BebasNeueBook.ttf);
+}
+
+* {
+	margin: 0;
+}
+html {
+	height: 100%;
+}
+hr {
+	background-color: #000;
+	height: 1px;
+}
+body {
+	color: #ffffff;
+	font-family: BebasNeueRegular;
+	font-size: 16px;
+	height: 100%;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+}
+img {
+	-webkit-filter: grayscale(0%);
+	-webkit-transition: 1.5s ease-in-out;
+	-moz-filter: grayscale(0%);
+	-moz-transition: 1.5s ease-in-out;
+	-o-filter: grayscale(0%);
+	-o-transition: 1.5s ease-in-out;
+	filter: grayscale(0%);	
+}
+img.desaturate { /* grayscale */
+	-webkit-filter: grayscale(100%);
+	-webkit-transition: 1.5s ease-in-out;
+	-moz-filter: grayscale(100%); 
+	-moz-transition: 1.5s ease-in-out;
+	-o-filter: grayscale(100%); 
+	-o-transition: 1.5s ease-in-out;
+	filter: grayscale(100%);
+}
+p {
+	margin: 0 auto;
+}
+.about-austin {
+	margin: auto;
+	width: 750px;
+}
+.about-austin img {
+	width: 750px;
+}
+.about-austin:first-child {
+	padding-top: 15px;
+}
+.caption {		
+	background-color: rgba(0,0,0,1);
+	color: #fff;
+	padding: 12px 10px;
+	position: relative;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	top: 50%;
+}
+.career-fair {
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+}
+.career-fair h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+.career-fair h1 {
+	padding: 15px;
+}
+.career-fair table {
+	text-align: left;
+}
+td {
+	padding-right: 15px;
+}
+.career-fair p,
+.career-fair table {
+	display: inline-block;
+	font-family: 'Monteserrat', sans-serif;
+	font-size: 125%;
+}
+.center-text {
+	text-align: center;
+}
+.container {
+	padding: 0;
+}
+.cover {
+	object-fit: cover;
+}
+.fixed-width {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+.footer {
+  	background-color: #1f1f1f;
+	height: 66px;
+	margin: 0 auto;
+	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	text-align: center;
+  	width: 100%;
+  	display: inline-block;
+}
+.push {
+	height: 66px;
+}
+.footer p {
+	display: block;
+	float: left;
+	padding: 3px 0 3px 15px;
+	margin: 0 auto;
+}
+.footer-nav > li {
+	display: block;
+	float: left;
+	padding-right: 15px;
+}
+.google-form iframe {
+	height: 600px;
+	width: 100%;
+}
+.header {
+	background: #000000;
+	float: left;
+	font-size: 150%;
+	z-index: 1;
+	width: 100%;
+}
+.header ul {
+	display: inline-table;
+	padding: 0;
+	float: left;
+}
+.header li {
+	display: inline-block;
+	float: left;
+}
+.logo {
+	width: 100%;
+}
+.logo img {
+	width: 100%;
+	object-fit: cover;
+	object-position: 0 55%;
+}
+.monteserrat {
+	font-family: "Monteserrat", sans-serif;
+}
+.nav {
+	margin: 0;
+}
+.nav a {
+	color: #fff;
+	display: block;
+	float: left;
+}
+.nav a:hover {
+	background-color: #000;
+	cursor: pointer;
+	color: #000;
+}
+.nav > li > a {
+	padding: 10px 15px 6px 15px;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently not supported by any browser */
+}
+.no-padding {
+	padding: 0;
+}
+.padding-around {
+	padding: 10px;
+}
+.padding-bottom {
+	padding-bottom: 15px;
+}
+.page {
+	color: #000;
+	background-color: #fff;
+	min-height: 100%;
+	width: 750px;
+	margin: 50px auto;
+}
+.page p {
+	padding-bottom: 15px;
+}
+.page .about-austin p {
+	padding-bottom: 50px;
+}
+.page .about-austin .slim-padding {
+	padding-bottom: 15px;
+}
+.page-image {
+	display: inline-block;
+	height: 200px;
+	position: relative;
+	width: 100%;
+}
+.page-image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 0 20%;
+}
+.paragraph {
+	padding-bottom: 15px;
+	margin: auto;
+	text-align: left;
+}
+.questions {
+	padding-bottom: 15px;
+}
+.section-image {
+	clear: both;
+	height: 378px;
+	margin-top: 10px;
+	position: relative;
+	width: 100%;
+}
+.section-image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.speaker {
+	background-image: url(../images/speaker.png);
+	height: 100%;
+	width: 100%;
+}
+.speaker-image {
+	width: 200px;
+	height: 200px;
+}
+.speaker-item {
+	padding: 5px 10px 10px 10px;
+}
+.speaker-page {
+	padding: 100px;
+}
+.speaker-row {
+	clear: both;
+	padding-bottom: 100px;
+	width: 100%;
+	display: flex;
+}
+.speaker-row:last-child {
+	padding-bottom: 0;
+}
+.text-align-left {
+	text-align: left;
+}
+.text-align-right {
+	text-align: right;
+}
+.text-lead {
+	font-family: BebasNeueBold;
+	font-size: 114px;
+	line-height: 85%;
+	margin-top: 5px;
+	position: relative;
+}
+.text-support {
+	font-family: BebasNeueRegular;
+	font-size: 30px;
+	line-height: 90%;
+	margin-bottom: -6px;
+	position: relative;
+}
+.thanks {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}
+.thanks h4 {
+	margin-bottom: 15px;
+}
+.thanks h4,
+.thanks button {
+	font-family: "Monteserrat", sans-serif;
+}
+.transition-left {
+	transition: padding-left .25s ease;
+}
+.transition-left:hover {
+	padding-left: 3%;
+}
+.transition-right {
+	transition: padding-right .25s ease;
+}
+.transition-right:hover {
+	padding-right: 3%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -66px;
+}
+
+.tower-image {
+	object-position: 0 40%;
+}
+.computer-girl {
+	object-position: 0 13%;
+}
+/* Ratio for photos is 2544x852 => 1200x387 */
