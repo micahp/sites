@@ -288,14 +288,14 @@ td {
 }
 .text-lead {
 	font-family: BebasNeueBold;
-	font-size: 114px;
+	font-size: 8vw;
 	line-height: 85%;
 	margin-top: 5px;
 	position: relative;
 }
 .text-support {
 	font-family: BebasNeueRegular;
-	font-size: 30px;
+	font-size: 2vw;
 	line-height: 90%;
 	margin-bottom: -6px;
 	position: relative;
