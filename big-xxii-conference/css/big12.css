@@ -296,10 +296,9 @@ td {
 }
 .speaker-item {
 	padding: 5px 10px 10px 10px;
-	width: 550px;
 }
 .speaker-page {
-	padding: 100px;
+	padding: 100px 0;
 }
 .speaker-row {
 	clear: both;
