@@ -67,6 +67,25 @@ p {
 .about-austin:first-child {
 	padding-top: 15px;
 }
+.btn {
+	padding: 10px 14px;
+}
+.btn-default {
+	color: #fff;
+    font-size: 20px;
+    background-color: #cf5300;
+    border: none;
+}
+.btn-default:hover {
+	color: #fff;
+    font-size: 20px;
+    background-color: #cf5300;
+    border-color: #ccc;	
+}
+.btn-wrapper {
+	margin-top: 25px;
+	text-align: center;
+}
 .caption {		
 	background-color: rgba(0,0,0,1);
 	color: #fff;
@@ -89,14 +108,27 @@ p {
 .career-fair table {
 	text-align: left;
 }
-td {
-	padding-right: 15px;
-}
 .career-fair p,
 .career-fair table {
 	display: inline-block;
 	font-family: 'Monteserrat', sans-serif;
 	font-size: 125%;
+}
+.career-fair-table td {
+	padding-right: 15px;
+	padding-top: 30px;
+}
+.career-fair-table tr {
+}
+.career-fair-table tr:first-of-type > td {
+	padding-top: 0;
+}
+.career-fair-talbe 
+.career-fair-cost-table table,
+.career-fair-cost-table th,
+.career-fair-cost-table td {
+	border: 1px solid #000;
+	text-align: center;	
 }
 .center-text {
 	text-align: center;
@@ -236,7 +268,6 @@ td {
 .page {
 	color: #000;
 	background-color: #fff;
-	min-height: 100%;
 	width: 750px;
 	margin: 50px auto;
 }
