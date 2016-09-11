@@ -83,6 +83,7 @@ p {
     border-color: #ccc;	
 }
 .btn-wrapper {
+	clear: both;
 	margin-top: 25px;
 	text-align: center;
 }
@@ -112,7 +113,11 @@ p {
 .career-fair table {
 	display: inline-block;
 	font-family: 'Monteserrat', sans-serif;
-	font-size: 125%;
+	font-size: 20px;
+}
+.career-fair-info {
+	display: inline-block;
+	float: left;
 }
 .career-fair-table td {
 	padding-right: 15px;
@@ -123,12 +128,12 @@ p {
 .career-fair-table tr:first-of-type > td {
 	padding-top: 0;
 }
-.career-fair-talbe 
-.career-fair-cost-table table,
 .career-fair-cost-table th,
 .career-fair-cost-table td {
 	border: 1px solid #000;
+	font-size: 16px;
 	text-align: center;	
+	padding: 10px;
 }
 .center-text {
 	text-align: center;
@@ -217,10 +222,8 @@ p {
 	display: block;
 	float: left;
 }
-.nav a:hover {
-	background-color: #000;
-	cursor: pointer;
-	color: #000;
+.header > .nav a:hover {
+	background-color: #cf5300;
 }
 .nav > li > a {
 	padding: 10px 15px 6px 15px;
@@ -241,6 +244,9 @@ p {
 }
 .padding-bottom {
 	padding-bottom: 15px;
+}
+.padding-bottom-2x {
+	padding-bottom: 30px;
 }
 .contact-page {
 	color: #000;
