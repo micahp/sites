@@ -252,8 +252,8 @@ p {
 	color: #000;
 	background-color: #fff;
 	width: 750px;
-	margin: 30px auto;
-	padding: 100px;
+	margin: 0 auto;
+	padding: 80px 100px;
 }
 .contact-item {
 	display: inline-block;
@@ -345,6 +345,9 @@ p {
 }
 .speaker-row:last-child {
 	padding-bottom: 0;
+}
+.stay-tuned {
+	margin-top: 100px;
 }
 .text-align-left {
 	text-align: left;
