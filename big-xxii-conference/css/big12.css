@@ -310,6 +310,9 @@ p {
 .questions {
 	padding-bottom: 15px;
 }
+.registration-table td {
+	padding-right: 25px;
+}
 .section-image {
 	clear: both;
 	height: 378px;
