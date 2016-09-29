@@ -16,6 +16,11 @@
 	src: url(../bebas/TTFs/BebasNeueBook.ttf);
 }
 
+@font-face {
+	font-family: Ailerons;
+	src: url("/Users/maslow/Downloads/ailerons/Ailerons-Typeface.otf");
+}
+
 * {
 	margin: 0;
 }
