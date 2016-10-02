@@ -354,6 +354,9 @@ p {
 .speaker-row:last-child {
 	padding-bottom: 0;
 }
+.stay-tuned {
+	margin-top: 100px;
+}
 .text-align-left {
 	text-align: left;
 }
