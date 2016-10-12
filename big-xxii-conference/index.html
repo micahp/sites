@@ -11,8 +11,8 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<div class="header">
-			<ul class="nav">
+		<nav class="clearfix">
+			<ul class="clearfix">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="info.html">Information</a></li>
 				<li><a href="registration.html">Registration</a></li>
@@ -22,12 +22,14 @@
 				<li><a href="keynotes.html">Keynotes</a></li>
 				<li><a href="austin.html">About Austin</a></li>
 				<li><a href="contact.html">Contact</a></li>
+				<li><a href="schedule.html">Schedule</a>
 			</ul>
-		</div>
+			<a href="#" id="pull">Menu</a>
+		</nav>	
 		<div class="home">
 			<div class="logo"><img class="desaturate" src="images/big12-2017 logo.jpg" width="1200" height="640"></div>
 			<div class="section-image">
-				<img class="cover desaturate" src="images/MORE INFO.jpg">
+				<img class="cover desaturate tower-img" src="images/MORE INFO.jpg">
 				<a href="./info.html">
 					<div class="caption transition-left float-left">
 						<div class="text-lead"><p>Get More Information</p></div>
@@ -100,23 +102,6 @@
 			</div>
 		</div>
 	</div>
-	<script>
-
-		$(".section-image, .logo").bind("inview", function(event, visible){
-			if (visible) {
-				$(this).find("img").removeClass("desaturate");
-			} else {
-				$(this).find("img").addClass("desaturate");
-			}
-		});
-
-	// Code to grayscale an image if it is not hovered over
-	// $(".section-image, .logo").hover(function() {
-	// 	$(this).find("img").removeClass("desaturate", 1000);
-	// }, function() {
-	// 	$(this).find("img").addClass("desaturate", 1000);
-	// });
-
-	</script>
+	<script src="js/big12.js"></script>
 </body>
 </html>

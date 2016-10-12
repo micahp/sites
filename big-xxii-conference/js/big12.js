@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	$(".section-image, .logo").bind("inview", function(event, visible){
 		if (visible) {
 			$(this).find("img").removeClass("desaturate");
@@ -6,6 +7,25 @@ $(document).ready(function() {
 			$(this).find("img").addClass("desaturate");
 		}
 	});
+
+	$(function() {
+		var pull    = $('#pull');
+		menu    = $('nav ul');
+		menuHeight  = menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+	});
+
+	$(window).resize(function(){
+		var w = $(window).width();
+		if(w > 320 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+
 });
 
 
