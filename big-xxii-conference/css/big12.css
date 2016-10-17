@@ -267,6 +267,7 @@ nav a#pull:hover {
 .logo {
 	width: 100%;
 	min-width: 320px;
+	max-width: 1425px;
 }
 .logo img {
 	height: auto;
@@ -317,7 +318,7 @@ nav a#pull:hover {
 	background-color: #fff;
 	width: 750px;
 	margin: 30px auto;
-	padding: 100px;
+	padding: 100px 0;
 }
 .contact-item {
 	display: inline-block;
@@ -378,10 +379,14 @@ nav a#pull:hover {
 .registration-table td {
 	padding-right: 25px;
 }
+.schedule-page {
+	line-height: 40px;
+}
 .section-image {
 	clear: both;
 	height: 378px;
 	margin-top: 10px;
+	max-width: 1425px;
 	position: relative;
 	width: 100%;
 }
