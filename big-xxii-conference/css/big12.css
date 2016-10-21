@@ -142,6 +142,9 @@ nav a#pull:hover {
     background-color: #cf5300;
     border-color: #ccc;	
 }
+.btn-margin-right {
+	margin-right: 100px;
+}
 .btn-wrapper {
 	clear: both;
 	margin-top: 25px;
