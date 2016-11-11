@@ -15,6 +15,10 @@
 	font-family: BebasNeueBook;
 	src: url(../bebas/TTFs/BebasNeueBook.ttf);
 }
+@font-face {
+	font-family: LucidaHandwritingItalic;
+	src: url(../lucida/LucidaHandwritingItalic.ttf);
+}
 
 * {
 	margin: 0;
@@ -25,6 +29,9 @@ html {
 hr {
 	background-color: #000;
 	height: 1px;
+}
+h3 {
+	padding-bottom: 10px;
 }
 body {
 	color: #ffffff;
@@ -279,6 +286,9 @@ nav a#pull:hover {
 	width: 100%;
 	min-width: 320px;
 }
+.lucida {
+	font-family: LucidaHandwritingItalic;
+}
 .monteserrat {
 	font-family: "Monteserrat", sans-serif;
 }
@@ -338,6 +348,9 @@ nav a#pull:hover {
 }
 .contact-item {
 	display; inline-block;
+}
+.no-margin {
+	margin: 0;
 }
 .page {
 	color: #000;
