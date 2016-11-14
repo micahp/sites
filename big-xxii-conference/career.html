@@ -11,66 +11,25 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<nav class="clearfix">
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="info.html">Information</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="career.html">Career Fair</a></li>
-				<li><a href="sponsorships.html">Sponsorships</a></li>
-				<li><a href="workshops.html">Workshops</a></li>
-				<li><a href="keynotes.html">Keynotes</a></li>
-				<li><a href="austin.html">About Austin</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="schedule.html">Schedule</a>
-				<li><a href="scholarships.html">Scholarships</a>
-			</ul>
-			<a href="#" id="pull">Menu</a>
-		</nav>	
-		<div class="section-image">
-			<img class="cover" src="images/CAREER FAIR.jpg">
-			<div class="caption pointer float-left">
-				<div class="text-lead"><p>Career Fair</p></div>
-				<div class="text-support"><p>Create a new level of achievement for the future</p></div>
-			</div>
-		</div>
-		<div class="page padding-around">
-			<div>
-				<h1 class="padding-bottom">Big XII Career and Graduate School Fair</h1>
-				<div class="questions padding-bottom">
-					<h3>Is your company or graduate institution seeking diverse student leaders?</h3>
-					<h3>Are you looking for innovative students who are prepared<br/> to make a positive impact on our nation?</h3>
-				</div>
-				<div class="paragraph monteserrat">
-					<p>The University of Texas at Austin and the Black Student Alliance will host the 40 Annual Big XII Conference on Black Student Government from February 16-18, 2017.  During the conference a Career and Graduate School Fair will occur and we invite your company or graduate school to attend.  Your company or institution will receive the following benefits from attending Big XII Career and Graduate Fair:</p>
-					<ul>
-						<li>Make connections with more than 1,000 African/African American students.</li>
-						<li>Inform students of career opportunities within a diverse global environment.</li>
-						<li>Showcase your commitment to influence the lives of students and our nation.</li>
-						<li>Your description and logo will be printed in the Big XII Conference Program Booklet.</li>
-					</ul>
-					<hr>
-				</div>
-			</div>
-			<div class="career-fair-info text-align-left padding-bottom">
-				<h3>Date</h3>
-				<div class="monteserrat padding-bottom-2x">Friday, February 17, 2017 from 9:00 am- 4:00 pm</div>
-				<h3>Location</h3>
-				<div class="monteserrat padding-bottom-2x">The University of Texas Campus</div>
-				<h3>Cost</h3>
-				<div class="cost-table padding-bottom-2x">
-					<table class="monteserrat">
-						<tr><td><b>Options</b></td><td><b>Platinum $1500</b></td><td><b>Gold $1000</b></td><td><b>Silver $400</b></td></tr>
-						<tr><td>Reserved Booth at Career Fair</td><td>&#x2713</td><td>&#x2713</td><td>&#x2713</td></tr>
-						<tr><td>Student Resume Folder</td><td>&#x2713</td><td>&#x2713</td><td></td></tr>
-						<tr><td>Hospitality Suites, Coffee Chats, Info Sessions or Dinner</td><td>&#x2713</td><td></td><td></td></tr>
-					</table>	
-				</div>
-			</div>
-			<div class="btn-wrapper">
-				<a class="btn btn-default" target="__blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdjO4GxHr99uKIr0aUDYtJDkmjHUgEfvZXQnAC-JNQTMV8etw/viewform">Register and Make Credit Card Payment</a>
-			</div>
+		<span id="header"></span>
+		<span id="section-image"></span>
+		<div id="page" class="page padding-around">
+			
 		</div>
 	</div>
 	<script src="js/big12.js"></script>
+	<script type="text/javascript" src="nunjucks.js"></script>
+	<script>
+		var header = nunjucks.render('templates/header.html');
+		var sectionImage = nunjucks.render('templates/section-image.html', {
+			title: "Career Fair",
+			subtitle: "Create a new level of achievement for the future",
+			img_url: "CAREER FAIR.jpg",
+			side: "left"
+		});
+		var page = nunjucks.render('templates/career_page.html');
+		$('#header').html(header);
+		$('#section-image').html(sectionImage);
+		$('#page').html(page);
+	</script>
 </body>
