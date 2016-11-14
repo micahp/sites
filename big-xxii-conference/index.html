@@ -11,23 +11,8 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<nav class="clearfix">
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="info.html">Information</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="career.html">Career Fair</a></li>
-				<li><a href="sponsorships.html">Sponsorships</a></li>
-				<li><a href="workshops.html">Workshops</a></li>
-				<li><a href="keynotes.html">Keynotes</a></li>
-				<li><a href="austin.html">About Austin</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="schedule.html">Schedule</a>
-				<li><a href="scholarships.html">Scholarships</a>
-			</ul>
-			<a href="#" id="pull">Menu</a>
-		</nav>	
-		<div class="home">
+		<span id="header"></span>
+		<div id="page" class="home">
 			<div class="logo"><img src="images/big12-2017 logo.jpg" width="1200" height="640"></div>
 			<div class="section-image">
 				<img class="cover desaturate tower-img" src="images/MORE INFO.jpg">
@@ -122,5 +107,76 @@
 		</div>
 	</div>
 	<script src="js/big12.js"></script>
+	<script type="text/javascript" src="nunjucks.js"></script>
+	<script>
+		// var pages = {
+		// 	info: {
+		// 		img_url: 'MORE INFO.jpg',
+		// 		title: 'Get More Information',
+		// 		subtitle: 'Find out more details about the 40th Big XII Conference'
+		// 	},
+		// 	registration: {
+		// 		img_url: 'REGISTER LATER.jpg',
+		// 		title: 'Registration',
+		// 		subtitle: 'Registration will be available Friday, September 30'
+		// 	},
+		// 	career: {
+		// 		img_url: 'CAREER FAIR.jpg',
+		// 		title: 'Career Fair',
+		// 		subtitle: 'Create a new level of achievement for the future'
+		// 	},
+		// 	sponsorships: {
+		// 		img_url: 'SPONSORSHIP.jpg',
+		// 		title: 'Sponsorships',
+		// 		subtitle: 'Broaden your spectrum and bridge the gap'
+		// 	},
+		// 	workshops: {
+		// 		img_url: 'WORKSHOPS.jpg',
+		// 		title: 'Workshops',
+		// 		subtitle: 'Interested in molding the minds of the movement'
+		// 	},
+		// 	keynotes: {
+		// 		img_url: 'KEYNOTE.jpg',
+		// 		title: 'Keynotes',
+		// 		subtitle: 'Keynote Speakers and everything you need to know about them'
+		// 	},
+		// 	austin: {
+		// 		img_url: 'ABOUT AUSTIN.jpg',
+		// 		title: 'About Austin',
+		// 		subtitle: 'The conference will be held deep in the heart of Texas'
+		// 	},
+		// 	contact: {
+		// 		img_url: 'CONTACT US.jpg',
+		// 		title: 'Contact Us',
+		// 		subtitle: 'Stay Connected through email and social media'
+		// 	},
+		// 	schedule: {
+		// 		img_url: 'schedule.jpg',
+		// 		title: 'Schedule',
+		// 		subtitle: 'Tentative Schedule at a Glance'
+		// 	},
+		// 	scholarships: {
+		// 		img_url: 'scholarships.jpg',
+		// 		title: 'Scholarships',
+		// 		subtitle: 'How to Get Your Trip Financed'
+		// 	}
+		// };
+
+
+		var header = nunjucks.render('templates/header.html');
+		$('#header').html(header);
+
+		// var count = 0;
+		// for (var key of pages) {
+		// 	var sectionImage = nunjucks.render('templates/section-image.html', {
+		// 		title: pages[key]['title'],
+		// 		subtitle: pages[key]['subtitle'],
+		// 		img_url: pages[key]['img_url'],
+		// 		side: count % 2 == 0 ? 'left' : 'right' 
+		// 	});
+		// 	$('#page').append(sectionImage);
+		// 	count++;
+		// }
+	</script>
 </body>
 </html>
