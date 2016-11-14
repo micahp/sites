@@ -127,9 +127,11 @@ nav a#pull:hover {
 .about-austin {
 	margin: auto;
 	width: 750px;
+	max-width: 100%;
 }
 .about-austin img {
 	width: 750px;
+	max-width: 100%;
 }
 .about-austin:first-child {
 	padding-top: 15px;
