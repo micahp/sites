@@ -11,72 +11,24 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<nav class="clearfix">
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="info.html">Information</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="career.html">Career Fair</a></li>
-				<li><a href="sponsorships.html">Sponsorships</a></li>
-				<li><a href="workshops.html">Workshops</a></li>
-				<li><a href="keynotes.html">Keynotes</a></li>
-				<li><a href="austin.html">About Austin</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="schedule.html">Schedule</a>
-				<li><a href="scholarships.html">Scholarships</a>
-			</ul>
-			<a href="#" id="pull">Menu</a>
-		</nav>	
-		<div class="section-image">
-			<img class="cover" src="images/REGISTER LATER.jpg">	
-			<div class="caption pointer float-right">
-				<div class="text-lead"><p>Registration</p></div>
-				<div class="text-support"><p>Registration will be available Wednesday, October 5</p></div>
-			</div>
-		</div>
-		<div class="page">
-			<div class="padding-around">
-				<h3>Details</h3>
-				<p class="monteserrat">We are looking forward to your participation in the 2017 Big XII Conference on Black Student Government. Registration is on a first come, first serve basis.</p>
-				<p class="monteserrat">You must be registered prior to attending the conference. NO ON SITE registration will be permitted.</p>
-				<p class="monteserrat">The AT&T Executive Education and Conference Center is the conference host hotel. We have reserved the entire hotel for the conference at $155 per night (tax not included).</p>
-				<p class="monteserrat">Cancellation Policy: NO REFUNDS will be given if your attendance is not possible (substitutions are acceptable but must be pre-approved by the registration committee).</p>
-			</div>
-			<div class="padding-around">
-				<h3>Deadlines</h3>
-				<p class="monteserrat">Please make room reservations directly with the hotel by January 25, 2017 to guarantee the conference rate.</p>
-				<p class="monteserrat">The final day to book a guest room is Feb 01, 2017.</p>
-			</div>
-			<div class="padding-around">
-				<h3>Conference Costs</h3>
-				<div class="text-align-left">
-					<div class="cost-table">
-						<table class="monteserrat registration-table">
-						<tr><td><b>Registration Type</b></td><td><b>Cost</b></td><td><b>After Deadline</b></td></tr>
-						<tr><td>Big XII Delegates</td><td>$210.00</td><td>$260.00</td></tr>
-						<tr><td>Big XII Schools</td><td>$220.00</td><td>$270.00</td></tr>
-						<tr><td>Non-Big XII Schools</td><td>$230.00</td><td>$280.00</td></tr>
-						<tr><td>Advisors</td><td>$250.00</td><td>$300.00</td></tr>
-						<tr><td>Activity Pass</td><td>$40.00</td><td>$40.00</td></tr>
-					</table><br/>	
-					</div>
-				</div>
-			</div>
-			<div class="padding-around">
-				<h3>Booking</h3>
-				<p class="monteserrat">For reservations visit <a href="https://resweb.passkey.com/go/UTLIBA0217">https://resweb.passkey.com/go/UTLIBA0217</a>.</p>
-			</div>
-			<div>
-				<div style="padding: 10px 10px 0 10px">
-					<h3>Registration Form</h3>
-					<p class="monteserrat">Please click the button below to complete your registeration form. Payment is due at the time of registration. <b>We will only accept payment by credit card.</b> After you have sumbitted your form, you will be redirected to the payment page to complete your registration via credit card.</p>
-				</div>
-			</div>
-			<div class="btn-wrapper">
-				<a class="btn btn-default" target="__blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd9ie2QiZHzvht-PBlJSlJqDnY2dj5e4dR7yPJSLieaGRavew/viewform"><b>Register For The Conference</b></a>
-			</div>
-		</div>
+		<span id="header"></span>
+		<span id="section-image"></span>
+		<div id="page" class="page"></div>
 	</div>
 	<script src="js/big12.js"></script>
+	<script src="nunjucks.js"></script>
+	<script>
+		var header = nunjucks.render('templates/header.html');
+		var page = nunjucks.render('templates/registration_page.html');
+		var sectionImage = nunjucks.render('templates/section-image.html', {
+			title: "Registration",
+			subtitle: "Registration will be available Wednesday, October 5",
+			img_url: "REGISTER LATER.jpg",
+			side: "right"
+		});
+		$('#header').html(header);
+		$('#page').html(page);
+		$('#section-image').html(sectionImage);
+	</script>
 </body>
 </html>

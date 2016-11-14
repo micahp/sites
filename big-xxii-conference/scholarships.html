@@ -11,54 +11,23 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<nav class="clearfix">
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="info.html">Information</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="career.html">Career Fair</a></li>
-				<li><a href="sponsorships.html">Sponsorships</a></li>
-				<li><a href="workshops.html">Workshops</a></li>
-				<li><a href="keynotes.html">Keynotes</a></li>
-				<li><a href="austin.html">About Austin</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="schedule.html">Schedule</a>
-				<li><a href="scholarships.html">Scholarships</a>
-			</ul>
-			<a href="#" id="pull">Menu</a>
-		</nav>	
-		<div class="section-image">
-			<img class="cover" src="images/scholarships.jpg">
-			<div class="caption pointer float-right">
-				<div class="text-lead"><p>Scholarships</p></div>
-				<div class="text-support"><p>How to get your trip financed</p></div>
-			</div>
-		</div>
-		<div class="page">
-			<h3></h3>
-			<p class="monteserrat">We are now accepting applications for <a href="docs/2017 Big XII Conference on Black Student Government Cash Awards Packet .pdf">Cash Awards</a> and <a href="docs/2017 Big XII Conference on Black Student Government Recognition Awards.pdf">Recognition Awards</a>.</p>
-			<p class="monteserrat">Deadline for both applications is January 30, 2017.</p>
-			<p class="monteserrat">The Awards Committee of the Big XII Conference on Black Student Government is pleased to accept applications for the following <a href="docs/2017 Big XII Conference on Black Student Government Cash Awards Packet .pdf">cash awards</a>:</p>
-			<ul class="monteserrat padding-bottom">
-				<li>Dyric Burt Big XII Outstanding Freshman of the Year</li>
-				<li>Outstanding Big XII Sophomore of the Year</li>
-				<li>Outstanding Big XII Junior of the Year</li>
-				<li>Outstanding Big XII Senior of the Year</li>
-				<li>Outstanding Non Big XII Freshman of the Year</li>
-				<li>Outstanding Non Big XII Sophomore of the Year</li>
-				<li>Outstanding Non Big XII Junior of the Year</li>
-				<li>Robert Page, Jr. Award for Outstanding Non Big XII Senior of the Year</li>
-				<li>Clarence Wine Outstanding Big XII Council of the Year</li>
-				<li>Most Improved Big XII Council of the Year</li>
-				<li>Robert Page, Jr. Award for Outstanding Non Big XII Council of the Year</li>
-			</ul>
-			<p class="monteserrat">The Awards Committee of the Big XII Conference on Black Student Government is pleased to accept applications for the following <a href="docs/2017 Big XII Conference on Black Student Government Recognition Awards.pdf">recognition awards</a>:</p>
-			<ul class="monteserrat">
-				<li>Clarence Wine Outstanding Big XII Council of the Year</li>
-				<li>Most Improved Big XII Council of the Year</li>
-				<li>Robert Page, Jr. Award for Outstanding Non Big XII Council of the Year</li>
-			</ul>
-		</div>
+		<span id="header"></span>
+		<span id="section-image"></span>
+		<div id="page" class="page"></div>
 	</div>
 	<script src="js/big12.js"></script>
+	<script type="text/javascript" src="nunjucks.js"></script>
+	<script>
+		var header = nunjucks.render('templates/header.html');
+		var sectionImage = nunjucks.render('templates/section-image.html', { 
+			title: "Scholarships",
+			img_url: 'scholarships.jpg',
+			side: 'left',
+			subtitle: 'How to get your trip financed'
+		 });
+		var page = nunjucks.render('templates/page.html');
+		$('#header').html(header);
+		$('#section-image').html(sectionImage);
+		$('#page').html(page);
+	</script>
 </body>
