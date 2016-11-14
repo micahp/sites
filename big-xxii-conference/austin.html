@@ -11,45 +11,24 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<nav class="clearfix">
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="info.html">Information</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="career.html">Career Fair</a></li>
-				<li><a href="sponsorships.html">Sponsorships</a></li>
-				<li><a href="workshops.html">Workshops</a></li>
-				<li><a href="keynotes.html">Keynotes</a></li>
-				<li><a href="austin.html">About Austin</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="schedule.html">Schedule</a>
-				<li><a href="scholarships.html">Scholarships</a>
-			</ul>
-			<a href="#" id="pull">Menu</a>
-		</nav>	
-		<div class="section-image">
-			<img class="cover" src="images/ABOUT AUSTIN.jpg">
-			<div class="caption float-left">
-				<div class="text-lead"><p>About Austin</p></div>
-				<div class="text-support"><p>The conference will be held deep in the heart of Texas</p></div>
-			</div>
-		</div>
-		<div class="page">
-			<div class="about-austin">
-				<h3>Conference Hotel - <a href="meetattexas.com">meetattexas.com</a></h3>
-				<img src="http://www.smartmeetings.com/wp-content/uploads/2015/05/att-ut_executive_education_center_elevation_proof-1430884277.jpg">
-				<p class="monteserrat">AT&T Executive Education and Conference Center is located in the heart of Austin, offering hotel rooms, meeting space and fine dining. Featuring 276 guest rooms and 21 suites onsite, the hotel offers inspiring views of The University of Texas at Austin's Main Tower, the Texas State Capitol, and our serene central courtyard. Room technologies and guest amenities make your stay for either business or pleasure equally enjoyable.</p>
-				<h3>University Information - <a href="Utexas.edu">Utexas.edu</a></h3>
-				<img src="https://utfreshmen.files.wordpress.com/2013/09/51a9662c6fb6019303.jpg">
-				<p class="monteserrat">At The University of Texas at Austin, we are a community working together to solve challenges facing society, blending research and discovery with learning. Like the state it calls home, The University of Texas at Austin is a bold, ambitious leader. Ranked among the biggest and best research universities in the country, UT Austin is home to more than 51,000 students and 3,000 teaching faculty. Together they are working to change the world through groundbreaking research and cutting-edge teaching and learning techniques. Here, tradition and innovation blend seamlessly to provide students with a robust collegiate experience. Amid the backdrop of Austin, Texas, a city recognized for its creative and entrepreneurial spirit, the university provides a place to explore countless opportunities for tomorrow’s artists, scientists, athletes, doctors, entrepreneurs and engineers.</p>
-				<h3>Austin Information - <a href="http://www.austintexas.org">austintexas.org</a></h3>
-				<img src="http://4.bp.blogspot.com/-uP2IZK4vPFc/UxlnO8hTk0I/AAAAAAAAASo/mNoQ9NuwIgM/s1600/IMG_1070.JPG">
-				<p class="monteserrat slim-padding">Austin is an incredible place to live, work, play and invest, and it's easy to see why. Since 2011, Austin has received more than 50 local and national rankings. And there are so many things to do here! For more information on what makes our city so unique, be sure to visit the Austin Convention and Visitors Bureau website. Located in Central Texas on the eastern edge of the American Southwest, Austin is the capital of the state of Texas, the Lone Star State. The city dates back to the 1830s, when the first Anglo-American settlers arrived in the area, then part of Mexico. In 1837, settlers founded the village of Waterloo on the banks of the Colorado River, the first permanent settlement in the area. By 1839, Waterloo would adopt the name Austin and the frontier town would become the capital of the Republic of Texas. The City is named for Stephen F. Austin, the "Father of Texas."</p>
-				<h3>City Attractions - <a href="http://www.austintexas.org/visit/things-to-do/">austintexas.org</a></h3>
-				<p class="monteserrat slim-padding">The secret is out. Everyone who visits Austin these days leaves with something great to say. They can't stop talking about our legendary live music, burgeoning restaurant scene and unique culture. And a list of other things that you just have to experience for yourself to truly understand what makes Austin so Austin. The rest of the country has already taken notice. And it's time you did, too. Years ago when people talked about Austin they would quickly mention the music. But that's just the beginning of what they're saying these days. Austin is also home to a wonderful ballet, world-class museums, one-of-a-kind shopping and beautiful outdoor spaces. You can just as easily spend your morning paddling the lake as you can strolling through a celebrated history museum. And it's okay if you don't have time to fit it all in, you can just come back and visit us again.</p>
-			</div>
-		</div>
+		<span id="header"></span>
+		<span id="section-image"></span>
+		<div id="page" class="page"></div>
 	</div>
 	<script src="js/big12.js"></script>
+	<script type="text/javascript" src="nunjucks.js"></script>
+	<script>
+		var header = nunjucks.render('templates/header.html');
+		var sectionImage = nunjucks.render('templates/section-image.html', {
+			title: "About Austin",
+			subtitle: "The conference will be held deep in the heart of Texas",
+			img_url: "ABOUT AUSTIN.jpg",
+			side: "left"
+		});
+		var page = nunjucks.render('templates/austin_page.html');
+		$('#header').html(header);
+		$('#section-image').html(sectionImage);
+		$('#page').html(page);
+	</script>
 </body>
 </html>
