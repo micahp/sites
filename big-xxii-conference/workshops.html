@@ -11,63 +11,24 @@
 </head>
 <body>
 	<div class="wrapper fixed-width">
-		<nav class="clearfix">
-			<ul class="clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="info.html">Information</a></li>
-				<li><a href="registration.html">Registration</a></li>
-				<li><a href="career.html">Career Fair</a></li>
-				<li><a href="sponsorships.html">Sponsorships</a></li>
-				<li><a href="workshops.html">Workshops</a></li>
-				<li><a href="keynotes.html">Keynotes</a></li>
-				<li><a href="austin.html">About Austin</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="schedule.html">Schedule</a>
-				<li><a href="scholarships.html">Scholarships</a>
-			</ul>
-			<a href="#" id="pull">Menu</a>
-		</nav>	
-		<div class="section-image">
-			<img class="cover" src="images/WORKSHOPS.jpg">
-			<div class="caption pointer float-right">
-				<div class="text-lead"><p>Workshops</p></div>
-				<div class="text-support"><p>Interested in molding the minds of the movement</p></div>
-			</div>
-		</div>
-		<div class="page padding-around">
-			<div class="padding-bottom">
-				<p class="monteserrat">
-					October 17, 2016<br/><br/>
-					Hello from The Great State of Texas!<br/><br/>
-	 
-					On behalf of the Planning Committee for the 40th Annual Big XII Conference on Black Student Government, we want officially invite students, staff, faculty, alumni and community members to submit a workshop or a poster proposal to present at the 40th Annual Big XII Conference on Black Student Government from February 16-18, 2017!  The conference is hosted at the University of Texas at Austin and we are excited to host some interactive, engaging and innovative workshops that will supplement what is learned at this prestigious leadership development conference.<br/><br/>
-					
-					This year’s theme is Making the Movement Matter.  The Big XII Conference on Black Student Government’s mission statement is: to provide strong, determined and courageous leadership and advocacy to affect our social and academic environments toward consideration of this community's collective concerns and issues where it pertains to the educational, socio-cultural, economic, and spiritual well-being of this community.<br/><br/>
-					 
-					Workshops should utilize the theme and the conference mission statement to organize effective learning outcomes for participants at the conference.<br/><br/>
-					 
-					New to the conference format, we are hosting a Poster Presentation, where students can present research that covers a variety of academic topics. We believe that undergraduate Research is an advancing field that should be highlighted. We encourage you to apply to conduct a poster presentation of any academic research you have done in any field that we will showcase during the conference. Your work will be seen by students and faculty from the University of Texas at Austin and from universities across the country!<br/><br/>
-					 
-					All proposals must be received by December 1st!<br/><br/>
-					 
-					Big 12 Conference Workshops Contact: <a href="big12workshops@gmail.com">big12workshops@gmail.com</a><br/><br/>
-				</p>
-			</div>
-			<div>
-				<h3 class="padding-bottom">Big XII Conference Workshops & Posters Timeline</h3>
-				<p class="monteserrat"><b>December 1, 2016</b><br/>Workshop and poster presentation proposals are due</p>
-				<p class="monteserrat"><b>December 1, 2016</b><br/>Workshop and poster presentation proposals are due</p>
-				<p class="monteserrat"><b>December 1-15, 2016</b><br/>Workshop Committee Reviews and deliberates on workshop and poster presentation proposals</p>
-				<p class="monteserrat"><b>December 16, 2016</b><br/>Workshop/poster presentations are confirmed, presenters are notified via email</p>
-				<p class="monteserrat"><b>January 16, 2017</b><br/>Follow up notification and reconfirmation of all workshop and poster presentations, presenters are asked to submit any materials, requests, etc.</p>
-				<p class="monteserrat"><b>February 16, 2017</b><br/>Follow up notification and reconfirmation of all workshop and poster presentations, presenters are asked to submit any materials, requests, etc.</p>
-			</div>
-			<div class="btn-wrapper">
-				<a class="btn btn-default btn-margin-right" target="__blank" href="https:/utexas.qualtrics.com/jfe/form/SV_6x0XbirgwXTwjBP">Host a Workshop</a>
-				<a class="btn btn-default" target="__blank" href="https://utexas.qualtrics.com/SE/?SID=SV_72MWDqFS63GE7J3">Present a Poster</a>
-			</div>
-		</div>
+		<span id="header"></span>
+		<span id="section-image"></span>
+		<div id="page" class="page padding-around"></div>
 	</div>
 	<script src="js/big12.js"></script>
+	<script type="text/javascript" src="nunjucks.js"></script>
+	<script>
+		var header = nunjucks.render('templates/header.html');
+		var sectionImage = nunjucks.render('templates/section-image.html', {
+			title: "Workshops",
+			subtitle: "Interested in molding the minds of the movement",
+			img_url: "WORKSHOPS.jpg",
+			side: "right"
+		});
+		var page = nunjucks.render('templates/workshops_page.html');
+		$('#header').html(header);
+		$('#section-image').html(sectionImage);
+		$('#page').html(page);
+	</script>
 </body>
 </html>
