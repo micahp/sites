@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Big XII Conference 2017 UT Austin</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/m.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/big12.css">
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -17,19 +17,19 @@
 		<div id="page" class="page"></div>
 	</div>
 	<script src="js/big12.js"></script>
-	<script src="nunjucks.js"></script>
+	<script type="text/javascript" src="nunjucks.js"></script>
 	<script>
 		var header = nunjucks.render('templates/header.html');
-		var page = nunjucks.render('templates/registration_page.html');
 		var sectionImage = nunjucks.render('templates/section-image.html', {
-			title: "Registration & Lodging",
-			subtitle: "Registration will be available Wednesday, October 5",
-			img_url: "REGISTER LATER.jpg",
+			title: "Volunteer",
+			subtitle: "Get Involved",
+			img_url: "volunteer.png",
 			side: "right"
 		});
+		var page = nunjucks.render('templates/volunteer_page.html');
 		$('#header').html(header);
-		$('#page').html(page);
 		$('#section-image').html(sectionImage);
+		$('#page').html(page);
 	</script>
 </body>
 </html>
