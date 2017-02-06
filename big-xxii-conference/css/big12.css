@@ -306,6 +306,10 @@ nav a#pull:hover {
 .cover {
 	object-fit: cover;
 }
+.event-image {
+	width: 100%;
+	object-fit: cover;
+}
 .fixed-width {
 	margin: 0 auto;
 	width: 100%;
