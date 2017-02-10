@@ -423,6 +423,9 @@ nav a#pull:hover {
 .padding-bottom-2x {
 	padding-bottom: 30px;
 }
+.padding-bottom-max {
+	padding-bottom: 50px;
+}
 .contact-page {
 	color: #000;
 	background-color: #fff;
