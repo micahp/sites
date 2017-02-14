@@ -297,6 +297,14 @@ nav a#pull:hover {
 	text-align: center;	
 	padding: 10px;
 }
+.schedule-table th, 
+.schedule-table td {
+	border: 1px solid #000;
+	border-top: none;
+	font-size: 16px;
+	text-align: center;	
+	padding: 10px;
+}
 .center-text {
 	text-align: center;
 }
@@ -498,6 +506,11 @@ nav a#pull:hover {
 .registration-table td {
 	padding-right: 25px;
 	text-align: left;
+}
+.schedule-header-date {
+	background-color: #cf5300;
+    padding: 10px;
+    color: white;
 }
 .schedule-page {
 	line-height: 40px;
