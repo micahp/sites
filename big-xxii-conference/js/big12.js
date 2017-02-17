@@ -8,7 +8,9 @@ $(document).ready(function() {
 				$(this).find("img").addClass("desaturate");
 			}
 		});
-	}	
+	} else {
+		$('.section-image').each().removeClass('.desaturate');
+	}
 
 	$(function() {
 		var pull    = $('#pull');
