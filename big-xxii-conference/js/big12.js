@@ -9,7 +9,7 @@ $(document).ready(function() {
 			}
 		});
 	} else {
-		$('.section-image').each().removeClass('.desaturate');
+		$('.cover').each().removeClass('.desaturate');
 	}
 
 	$(function() {
