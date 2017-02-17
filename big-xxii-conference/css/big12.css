@@ -211,6 +211,10 @@ nav a#pull:hover {
 	color: #fff;
 	text-decoration: none;
 }
+.announcement-text {
+	font-size: 65px;
+	font-weight: bold;
+}
 .about-austin {
 	margin: auto;
 	width: 750px;
@@ -307,6 +311,20 @@ nav a#pull:hover {
 }
 .center-text {
 	text-align: center;
+}
+.center-container {
+	display: inline-block;
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+    padding-bottom: 10px;
+	position: relative;
+	top: -14vw;
+}
+.center-parent {
+	background-color: #ffffff;
+	text-align: center;
+	height: 0;
 }
 .container {
 	padding: 0;
@@ -647,6 +665,9 @@ nav a#pull:hover {
 	ul.clearfix {
 		margin-left: 0;
 	}
+	.announcement-text {
+		font-size: 4vw;
+	}	
 }
 @media screen and (max-width: 844px) {
 	.text-lead {
@@ -661,6 +682,21 @@ nav a#pull:hover {
 	.page {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	.announcement-text {
+		font-size: 20px;
+		width: 200px;
+	}
+	.center-container a {
+		font-size: 10px;
+	}
+	.center-container {
+		padding-bottom: 0;
+	}
+	.center-container p,
+	.center-container a {
+		display: inline;
+		float: left;
 	}
 }
 @media screen and (max-width: 600px) {
@@ -709,6 +745,11 @@ nav a#pull:hover {
 		position: absolute;
 		right: 15px;
 		top: 10px;
+	}
+	.announcement-text {
+		visibility: hidden;
+		width: 0;
+		height: 0;
 	}
 }
 @media screen and (max-width: 390px) {
