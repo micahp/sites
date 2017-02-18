@@ -1,16 +1,12 @@
 $(document).ready(function() {
 	
-	if (document.innerWidth > 600) {
-		$(".section-image, .logo").bind("inview", function(event, visible){
-			if (visible) {
-				$(this).find("img").removeClass("desaturate");
-			} else {
-				$(this).find("img").addClass("desaturate");
-			}
-		});
-	} else {
-		$('.cover').each().removeClass('.desaturate');
-	}
+	$(".section-image, .logo").bind("inview", function(event, visible){
+		if (visible) {
+			$(this).find("img").removeClass("desaturate");
+		} else {
+			$(this).find("img").addClass("desaturate");
+		}
+	});
 
 	$(function() {
 		var pull    = $('#pull');
