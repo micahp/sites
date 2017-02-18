@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 	$(function() {
 		var pull    = $('#pull');
-		menu    = $('nav ul');
+		var menu    = $('nav ul');
 		menuHeight  = menu.height();
 
 		$(pull).on('click', function(e) {
