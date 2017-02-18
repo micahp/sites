@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$(".section-image, .logo").bind("inview", function(event, visible){
 		if (visible) {
 			$(this).find("img").removeClass("desaturate");
-		} else {
+		} else if (window.innerWidth > 600) {
 			$(this).find("img").addClass("desaturate");
 		}
 	});
