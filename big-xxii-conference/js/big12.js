@@ -6,6 +6,11 @@ $(document).ready(function() {
 		} else if (window.innerWidth > 600) {
 			$(this).find("img").addClass("desaturate");
 		}
+		if ($(window).height() < 600) {
+			$('.cover').each(function () {
+				$(this).removeClass('desaturate');
+			});
+		}
 	});
 
 	var pull    = $('#pull');
