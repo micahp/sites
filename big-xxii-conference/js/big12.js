@@ -20,6 +20,7 @@ $(document).ready(function() {
 	});
 
 	$(window).resize(function(){
+		var menu    = $('nav ul');
 		var w = $(window).width();
 		if(w > 320 && menu.is(':hidden')) {
 			menu.removeAttr('style');
