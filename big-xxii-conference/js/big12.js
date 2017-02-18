@@ -8,16 +8,14 @@ $(document).ready(function() {
 		}
 	});
 
-	$(function() {
-		var pull    = $('#pull');
-		var menu    = $('nav ul');
-		menuHeight  = menu.height();
+	var pull    = $('#pull');
+	var menu    = $('nav ul');
+	menuHeight  = menu.height();
 
-		$(pull).on('click', function(e) {
-			e.preventDefault();
-			menu.slideToggle();
-		});
-	});
+	$(pull).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});	
 
 	$(window).resize(function(){
 		var menu    = $('nav ul');
